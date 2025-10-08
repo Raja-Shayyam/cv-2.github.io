@@ -80,8 +80,8 @@ useEffect(()=>{
         {/* RIGHT: 3D Model or Visual */}
         <figure>
           <div className="hero-3d-layout">
-            {hi ? <HeroExperience /> : <MobileHero /> }
-            {/* {hi ? <MobileHero /> : <HeroExperience /> } */}
+            {/* {hi ? <HeroExperience /> : <MobileHero /> } */}
+            {hi ? <MobileHero /> : <HeroExperience /> }
           </div>
         </figure>
       </div>

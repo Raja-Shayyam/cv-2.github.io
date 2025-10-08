@@ -14,7 +14,8 @@ const ContactExperience = () => {
         position={[5, 9, 1]}
         castShadow
         intensity={2.5}
-        color="#ffd9b3"
+        color="#c9b49fff"
+        // color="#0286c9ff"
       />
 
       <OrbitControls
