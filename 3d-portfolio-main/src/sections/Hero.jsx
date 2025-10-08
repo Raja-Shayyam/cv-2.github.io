@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import { words } from "../constants";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
 import { useEffect, useState } from "react";
+import { MobileHero } from "../components/models/hero_models/MobileHero";
 
 const Hero = () => {
   const [hi, showHi] = useState()
@@ -79,7 +80,8 @@ useEffect(()=>{
         {/* RIGHT: 3D Model or Visual */}
         <figure>
           <div className="hero-3d-layout">
-            {hi && <HeroExperience />}
+            {/* {hi ? <HeroExperience /> : <MobileHero /> } */}
+            {hi ? <MobileHero /> : <HeroExperience /> }
           </div>
         </figure>
       </div>
