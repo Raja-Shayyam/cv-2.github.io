@@ -19,8 +19,8 @@ const Hero = () => {
   });
 
  const IsMobile = () => {
-  console.log('window.innerWidth', window.innerWidth);
-  const hii = window.innerWidth >= 768; // true if mobile or small tablet
+  console.log('window.innerWidth', window.outerWidth);
+  const hii = window.outerWidth >= 768; // true if mobile or small tablet
   showHi(hii)
   
 }
