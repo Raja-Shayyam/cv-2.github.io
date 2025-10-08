@@ -5,9 +5,11 @@ import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
 import { words } from "../constants";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
-  
+  const [hi, showHi] = useState()
+
   useGSAP(() => {
     gsap.fromTo(
       ".hero-text h1",
@@ -15,6 +17,16 @@ const Hero = () => {
       { y: 0, opacity: 1, stagger: 0.2, duration: 0.5, ease: "power2.inOut" }
     );
   });
+
+ const IsMobile = () => {
+  console.log('window.innerWidth', window.innerWidth);
+  const hii = window.innerWidth >= 768; // true if mobile or small tablet
+  showHi(hii)
+  
+}
+useEffect(()=>{
+  IsMobile()
+},[])
 
   return (
     <section id="hero" className="relative overflow-hidden">
@@ -67,7 +79,7 @@ const Hero = () => {
         {/* RIGHT: 3D Model or Visual */}
         <figure>
           <div className="hero-3d-layout">
-            <HeroExperience />
+            {hi && <HeroExperience />}
           </div>
         </figure>
       </div>
